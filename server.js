@@ -6,11 +6,15 @@ const app = express();
 app.set('view engine', 'ejs');
 
 app.get('/', (require, response) => {
-	response.send('<html><body><h1>Portal de notícias</h1></body></html>');
+	response.render('home/index');
 });
 
-app.get('/tecnologia', (require, response) => {
-	response.render('secao/tecnologia')
+app.get('/add_noticia', (require, response) => {
+	response.render('admin/add_noticia')
+});
+
+app.get('/noticias', (require, response) => {
+	response.render('noticias/noticias')
 });
 
 app.listen(3000, () => {

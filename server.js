@@ -1,11 +1,6 @@
 'use strict';
 
-const express = require('express');
-const app = express();
-
-const msg = require('./modulo_teste');
-
-app.set('view engine', 'ejs');
+const app = require('./config/server');
 
 app.get('/', (require, response) => {
 	response.render('home/index');
@@ -21,5 +16,4 @@ app.get('/noticias', (require, response) => {
 
 app.listen(3000, () => {
 	console.log('Server listen on port 3000');
-	console.log(msg());
 });

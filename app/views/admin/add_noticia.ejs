@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Portal de notícias</title>
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		body {
+			font-family: Lato, Verdana, sans-serif;
+			background-color: #FEFEFE;
+		}
+
+		.title {
+			padding: 60px 0 10px 0;
+			background-color: #888888;
+			text-align: center;
+			height: 100px;
+		}
+
+		.content {
+			margin-top: 20px;
+			text-align: center;
+		}
+
+		.text-input {
+			text-align: center;
+			height: 3em;
+			width: 30em;
+			border: 1px solid #CCC;
+			border-radius: 2px;
+		}
+
+		button {
+			background-color: #CDCDCD
+			height: 3em;
+		    min-width: 88px;
+		    padding: 12px 20px;
+		    border: none;
+		    outline: none;
+		    letter-spacing: 0;
+		    font-weight: bold;
+		    cursor: pointer;
+		    overflow: hidden;
+			border-radius: 3px;
+		}
+
+		button:hover {
+			transition: all 0.2s ease-in-out;
+			background-color: #BCBCBC;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="title">
+				<h1>Portal de notícias NodeJS</h1>			
+			</div>
+			<div class="content">
+				<h2>Adicionar notícia</h2>
+				<br>
+				<form action="">
+					<input type="text" id="titulo" class="text-input" placeholder="Informe o título"><br><br>
+					<input type="text" id="noticia" class="text-input" placeholder="Informe o conteúdo"><br><br>
+					<button>Adicionar</button>
+				</form>				
+			</div>
+		</div>
+	</div>
+</body>
+</html>

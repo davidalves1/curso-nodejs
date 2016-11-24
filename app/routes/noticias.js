@@ -16,9 +16,8 @@ module.exports = function(app) {
 		let query = 'SELECT * FROM noticias';
 
 		connection.query(query, (error, data) => {
-			res.send(data);
+			res.render('noticias/noticias', {noticias: data});
 		});
 	
-		// res.render('noticias/noticias')
 	});
 }

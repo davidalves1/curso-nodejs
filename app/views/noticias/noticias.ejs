@@ -33,7 +33,20 @@
 				<h1>Portal de notícias NodeJS</h1>			
 			</div>
 			<div class="content">
-				<p>Suas notícias</p>
+				<table>
+					<thead>
+						<th>ID</th>
+						<th>Título</th>
+						<th>Notícia</th>
+					</thead>
+					<% noticias.map((noticia) => { %>
+						<tr>
+							<td><%= noticia.id %></td>
+							<td><%= noticia.titulo %></td>
+							<td><%= noticia.noticia %></td>
+						</tr>
+					<% }); %>
+				</table>
 			</div>
 		</div>
 	</div>

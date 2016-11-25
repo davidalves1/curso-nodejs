@@ -24,6 +24,26 @@
 			margin-top: 20px;
 			text-align: center;
 		}
+
+		.lista_noticias {
+			display: flex;
+			justify-content: center;
+		}
+
+		.lista_noticias table {
+			border-collapse: collapse;
+		}
+		
+		.lista_noticias table th {
+			background-color: #375CB1;
+			color: #FFF;
+			height: 2em;
+		}
+
+		.lista_noticias table td {
+			padding: .8em;
+			border-bottom: 1px solid #888;
+		}
 	</style>
 </head>
 <body>
@@ -33,20 +53,20 @@
 				<h1>Portal de notícias NodeJS</h1>			
 			</div>
 			<div class="content">
-				<table>
-					<thead>
+				<div class="lista_noticias">
+					<table>
 						<th>ID</th>
 						<th>Título</th>
 						<th>Notícia</th>
-					</thead>
-					<% noticias.map((noticia) => { %>
-						<tr>
-							<td><%= noticia.id %></td>
-							<td><%= noticia.titulo %></td>
-							<td><%= noticia.noticia %></td>
-						</tr>
-					<% }); %>
-				</table>
+						<% noticias.map((noticia) => { %>
+							<tr>
+								<td><%= noticia.id %></td>
+								<td><%= noticia.titulo %></td>
+								<td><%= noticia.noticia %></td>
+							</tr>
+						<% }); %>
+					</table>
+				</div>
 			</div>
 		</div>
 	</div>

@@ -57,12 +57,10 @@
 					<table>
 						<th>ID</th>
 						<th>Título</th>
-						<th>Notícia</th>
-						<% noticias.map((noticia) => { %>
+						<% data.map((data) => { %>
 							<tr>
-								<td><%= noticia.id %></td>
-								<td><%= noticia.titulo %></td>
-								<td><%= noticia.noticia %></td>
+								<td><%= data.id %></td>
+								<td><%= data.titulo %></td>
 							</tr>
 						<% }); %>
 					</table>

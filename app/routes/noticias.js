@@ -3,13 +3,11 @@ module.exports = function(app) {
 	app.get('/noticias', (req, res) => {
 
 		const connection = app.config.db_connection();
+		const Noticias = app.app.models.Noticias; // app.caminhho-ate-o-model
 
-		let query = 'SELECT * FROM noticias';
-
-		connection.query(query, (error, data) => {
+		Noticias.getNoticias(connection, (error, data) => {
 			res.render('noticias/noticias', {data: data});
 		});
-	
 	});
 
 	app.post('/noticia', (req, res) => {

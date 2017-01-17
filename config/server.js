@@ -12,6 +12,7 @@ app.set('views', './app/views');
 consign()
 	.include('app/routes')
 	.then('config/db_connection.js') // Tem que colocar a extensão, senão o consign confunde com um subdiretório
+	.then('app/models')
 	.into(app);
 
 module.exports = app;

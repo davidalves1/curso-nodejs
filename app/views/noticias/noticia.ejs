@@ -26,23 +26,7 @@
 		}
 
 		.noticia {
-			display: flex;
-			justify-content: center;
-		}
-
-		.noticia table {
-			border-collapse: collapse;
-		}
-		
-		.noticia table th {
-			background-color: #375CB1;
-			color: #FFF;
-			height: 2em;
-		}
-
-		.noticia table td {
-			padding: .8em;
-			border-bottom: 1px solid #888;
+			text-align: center;
 		}
 	</style>
 </head>
@@ -50,12 +34,14 @@
 	<div class="container">
 		<div class="row">
 			<div class="title">
-				<h1>Portal de notícias NodeJS</h1>			
+				<h1>Portal de notícias NodeJS</h1>
+				<a href="/">Home</a> - <a href="noticias">Notícias</a> - <a href="add_noticia">Cadastrar notícia</a>		
 			</div>
 			<div class="content">
 				<div class="noticia">
-                    <h1><%= data.titulo %></h1>
-                    <p><%= data.noticia %></p>
+                    <h1><%= data[0].titulo %></h1>
+                    <br>
+                    <p><%= data[0].noticia %></p>
 				</div>
 			</div>
 		</div>

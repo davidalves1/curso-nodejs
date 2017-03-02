@@ -33,7 +33,7 @@
 			border-radius: 2px;
 		}
 
-		button {
+		.button {
 			background-color: #375CB1;
 			color: #FFF;
 			height: 3em;
@@ -48,7 +48,7 @@
 			border-radius: 3px;
 		}
 
-		button:hover {
+		.button:hover {
 			transition: all 0.2s ease-in-out;
 			background-color: #264BA0;
 		}
@@ -64,10 +64,10 @@
 			<div class="content">
 				<h2>Adicionar notícia</h2>
 				<br>
-				<form action="">
+				<form action="noticias/salvar">
 					<input type="text" id="titulo" class="text-input" placeholder="Informe o título"><br><br>
 					<input type="text" id="noticia" class="text-input" placeholder="Informe o conteúdo"><br><br>
-					<button>Adicionar</button>
+					<input type="submit" class="button" value="Adicionar">
 				</form>				
 			</div>
 		</div>
